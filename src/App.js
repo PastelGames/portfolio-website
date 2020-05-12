@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Tweet from './Tweet';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import "98.css";
 import {Home} from './Home';
