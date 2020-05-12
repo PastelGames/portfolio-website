@@ -8,7 +8,7 @@ export const Home = () => (
             <div className="col">
                 <Window title="A" content="nigga"/>
                 <Window title="nigger" content={
-                    <p style={{textAlign: "center"}}>Test buhijguylgulyglgvlggbuglj jogljg g ug fguygkgulyf jhkuf kyfuo igiuguygygu ig8gbjhgug jhgufguyg7tf jhf jhfjhhj jhg </p>
+                    <p style={{textAlign: "center"}}>Test</p>
                 } />
             </div>
             <div className="col">
