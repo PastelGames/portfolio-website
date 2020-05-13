@@ -14,10 +14,11 @@ import Data from "./particles-params.json";
 function App() {
 
   return (
-    <React.Fragment>
+    <React.Fragment >
       <Particles params={Data} style={{
         position: "fixed",
-        zIndex: "-1"
+        zIndex: "-1",
+        backgroundColor: "#ffccff"
       }} />
       <Layout>
         <Router>

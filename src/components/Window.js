@@ -5,7 +5,9 @@ const Window = props => {
     return (
         <div>
             <div className="window m-3">
-                <div className="title-bar">
+                <div className="title-bar" style={{
+                    background: "linear-gradient(90deg, #ff66ff, #ffccff)"
+                }}>
                     <div className="title-bar-text">{props.title}</div>
                     <div className="title-bar-controls">
                         <button aria-label="Minimize" />

@@ -5,11 +5,10 @@ import {Link} from 'react-router-dom';
 
 const Styles = styled.div`
     .navbar{
-        background-color: #222;
     }
 
-    a, .navbar-brand, .navbar-nav .nav-link {
-        color: #bbb;
+    .navbar-brand, .navbar-nav .nav-link {
+        color: #fffff;
 
         &:hover {
             color: white;
@@ -25,18 +24,18 @@ export const NavigationBar = () => (
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Item>
-                        <Nav.Link>
-                            <Link to="/">Home</Link>
+                        <Nav.Link active="false">
+                            <Link to="/" className="nav-link">Home</Link>
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>
-                            <Link to="/games">Games</Link>
+                        <Nav.Link active="false">
+                            <Link to="/games" className="nav-link">Games</Link>
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <Nav.Link>
-                            <Link to="/programming">Programming</Link>
+                        <Nav.Link active="false">
+                            <Link to="/programming" className="nav-link">Programming</Link>
                         </Nav.Link>
                     </Nav.Item>
                 </Nav>
