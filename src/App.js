@@ -18,7 +18,7 @@ function App() {
       <Particles params={Data} style={{
         position: "fixed",
         zIndex: "-1"
-      }}/>
+      }} />
       <Layout>
         <Router>
           <NavigationBar/>
