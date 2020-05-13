@@ -19,7 +19,7 @@ const Styles = styled.div`
 
 export const NavigationBar = () => (
     <Styles>
-        <Navbar className="container-fluid">
+        <Navbar expand="lg">
             <Navbar.Brand href="/">Pastel Pink Games &lt;3</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
