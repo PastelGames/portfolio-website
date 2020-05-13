@@ -1,14 +1,18 @@
 import React from 'react';
-import {Nav, Navbar, NavItem} from 'react-bootstrap';
+import {Nav, Navbar} from 'react-bootstrap';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import "98.css";
 
 const Styles = styled.div`
-    .navbar{
+    .navbar-brand {
+        color: #fffff;
+        font-size: 30px;
     }
 
-    .navbar-brand, .navbar-nav .nav-link {
+    .navbar-nav .nav-link {
         color: #fffff;
+        font-size: 18px;
 
         &:hover {
             color: white;
@@ -19,23 +23,31 @@ const Styles = styled.div`
 export const NavigationBar = () => (
     <Styles>
         <Navbar expand="lg">
-            <Navbar.Brand href="/">Pastel Pink Games &lt;3</Navbar.Brand>
+            <button>
+                <Navbar.Brand href="/" className="navbar-brand">Pastel Pink Games &lt;3</Navbar.Brand>
+            </button>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Item>
                         <Nav.Link active="false">
-                            <Link to="/" className="nav-link">Home</Link>
+                            <button active="false">
+                                <Link to="/" className="nav-link">Home</Link>
+                            </button>
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link active="false">
-                            <Link to="/games" className="nav-link">Games</Link>
+                            <button>
+                                <Link to="/games" className="nav-link">Games</Link>
+                            </button>
                         </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                         <Nav.Link active="false">
-                            <Link to="/programming" className="nav-link">Programming</Link>
+                            <button>
+                                <Link to="/programming" className="nav-link">Programming</Link>
+                            </button>
                         </Nav.Link>
                     </Nav.Item>
                 </Nav>

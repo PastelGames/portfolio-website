@@ -1,5 +1,6 @@
 import React from 'react';
 import "98.css";
+import './../App.css';
 
 const Window = props => { 
     return (
@@ -9,7 +10,7 @@ const Window = props => {
                     background: "linear-gradient(90deg, #ff66ff, #ffccff)"
                 }}>
                     <div className="title-bar-text">{props.title}</div>
-                    <div className="title-bar-controls">
+                    <div className="title-bar-controls" >
                         <button aria-label="Minimize" />
                         <button aria-label="Maximize" />
                         <button aria-label="Close" />
