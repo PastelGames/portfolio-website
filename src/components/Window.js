@@ -1,8 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "98.css";
 import './../App.css';
 
-const Window = props => { 
+var minimizeButtonID;
+var maximizeButtonID;
+var contentID;
+
+function Minimize(ID) {
+    var x = document.getElementById(ID);
+    if(x) {
+        x.style.display = "none";
+    }
+    console.log(x);
+}
+
+function Maximize(ID) {
+    var x = document.getElementById(ID);
+    if(x) {
+        x.style.display = "block";
+    }
+    console.log(x);
+}
+
+const Window = props => {
+    console.log(props.title);
+    
     return (
         <div>
             <div className="window m-3">
@@ -11,13 +33,15 @@ const Window = props => {
                 }}>
                     <div className="title-bar-text">{props.title}</div>
                     <div className="title-bar-controls" >
-                        <button aria-label="Minimize" />
-                        <button aria-label="Maximize" />
+                        <button aria-label="Minimize" onClick={ () => Minimize(props.title) }/>
+                        <button aria-label="Maximize" onClick={ () => Maximize(props.title) }/>
                         <button aria-label="Close" />
                     </div>
                 </div>
-                <div className="window-body">
-                    {props.content}
+                <div className="window-body text-center" id={props.title}>
+                    <div>
+                        {props.content}
+                    </div>
                 </div>
             </div>
         </div>

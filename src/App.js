@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="app">
       <React.Fragment>
+        {/*<!-- particles -->*/}
         <Particles params={Data} style={{
           position: "fixed",
           zIndex: "-1",

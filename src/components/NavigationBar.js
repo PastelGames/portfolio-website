@@ -23,15 +23,22 @@ const Styles = styled.div`
 export const NavigationBar = () => (
     <Styles>
         <Navbar expand="lg">
-            <button>
-                <Navbar.Brand href="/" className="navbar-brand">Pastel Pink Games &lt;3</Navbar.Brand>
-            </button>
+            <div className="window">
+                <div className="window-body">
+                    <Navbar.Brand href="/" className="navbar-brand">Pastel Games &lt;3</Navbar.Brand>
+                </div>
+            </div>
+            <div className="window">
+                <div className="window-body" style={{alignItems: "center"}}>
+                    <p>Colorfully Creative Software by El Tucker</p>
+                </div>
+            </div>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto">
                     <Nav.Item>
                         <Nav.Link active="false">
-                            <button active="false">
+                            <button>
                                 <Link to="/" className="nav-link">Home</Link>
                             </button>
                         </Nav.Link>
