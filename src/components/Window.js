@@ -1,10 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "98.css";
 import './../App.css';
-
-var minimizeButtonID;
-var maximizeButtonID;
-var contentID;
 
 function Minimize(ID) {
     var x = document.getElementById(ID);
@@ -23,8 +19,6 @@ function Maximize(ID) {
 }
 
 const Window = props => {
-    console.log(props.title);
-    
     return (
         <div>
             <div className="window m-3">
@@ -39,9 +33,7 @@ const Window = props => {
                     </div>
                 </div>
                 <div className="window-body text-center" id={props.title}>
-                    <div>
-                        {props.content}
-                    </div>
+                    {props.content}
                 </div>
             </div>
         </div>
