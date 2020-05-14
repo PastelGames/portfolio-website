@@ -1,5 +1,6 @@
 import React from 'react';
 import "98.css";
+import './../App.css';
 
 export default class ImagePanelSlider extends React.Component {
 
@@ -44,7 +45,7 @@ export default class ImagePanelSlider extends React.Component {
                 </ul>
                 <div style={{margin: "5px"}}>
                     {/*Keep supporting fat people and stop being mean to them*/}
-                    <input id="range24" className="has-box-indicator" type="range" min="0" max={this.props.images.length - 1} step="1" value={this.state.value} 
+                    <input id="range24" className="has-box-indicator slider" type="range" min="0" max={this.props.images.length - 1} step="1" value={this.state.value} 
                     onChange={(e) => {
                         e.persist(); 
                         this.setState( state => ({

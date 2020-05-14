@@ -1,6 +1,7 @@
 import React from 'react';
 import "98.css";
 import Window from './components/Window';
+import {ProjectWindow} from './components/ProjectWindow';
 import ImagePanelSlider from './components/ImagePanelSlider';
 import TheHolySwordScreenshot from './images/the holy sword images.png';
 import TheHolySwordBanner from './images/holy sword banner.png';
@@ -30,6 +31,7 @@ export const Games = () => (
                     </div>
                 }
                 />
+                <ProjectWindow title="some game title" images={[TheHolySwordScreenshot, TheHolySwordBanner]} imageSwapSpeed="5" description="this is the description of the game" buttons={[{link: "https://google.com", label: "google"}, {link: "https://pornhub.com", label: "pornhub"}]}/>
             </div>
         </div>
     </div> 

@@ -9,3 +9,7 @@ a {
 button {
     cursor: url(self\ aware.png), pointer !important;
 }
+
+.slider {
+    cursor: url(images/HEART\ CURSOR/horizontal.png), pointer !important;
+}
