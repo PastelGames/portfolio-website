@@ -12,7 +12,6 @@ export default class ImagePanelSlider extends React.Component {
                     value: 0
             }
         }
-        var stuffs;
     }
 
     changeImage() {
@@ -28,6 +27,7 @@ export default class ImagePanelSlider extends React.Component {
             this.interval = setInterval(() => this.changeImage(), parseInt(this.props.switchSpeed, 10) * 1000);
             this.stuffs = this.props.images[this.state.value];
         }
+        console.log(this.props.images);
     }
 
     componentWillUnmount() {
@@ -43,9 +43,9 @@ export default class ImagePanelSlider extends React.Component {
             return (
                 <div className="col">
                     {this.stuffs}
-                    <div style={{margin: "5px"}}>
+                    <div id={this.props.id} style={{margin: "5px"}}>
                         {/*Keep supporting fat people and stop being mean to them*/}
-                        <input id="range24" className="has-box-indicator slider" type="range" min="0" max={this.props.images.length - 1} step="1" value={this.state.value} 
+                        <input className="has-box-indicator slider" type="range" min="0" max={this.props.images.length - 1} step="1" value={this.state.value} 
                         onChange={(e) => {
                             e.persist(); 
                             this.setState( state => ({

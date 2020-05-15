@@ -7,6 +7,14 @@ import LinkedInLogo from './LI-Logo.png';
 import { ProjectWindow } from './components/ProjectWindow';
 import ImagePanelSlider from './components/ImagePanelSlider';
 
+import THSSS1 from './images/THS/the holy sword images.png';
+import THSSS2 from './images/THS/thsss2.png';
+import THSSS3 from './images/THS/thsss3.png';
+
+const ImageBox = props => (
+    <ul className="tree-view"><img src={props.src} alt="THSSS1" style={{width: "100%", height: "100%", padding: "5px"}}/></ul>
+)
+
 export const Home = () => (
     <div className="container-fluid">
         <Window 
@@ -16,22 +24,18 @@ export const Home = () => (
             id="Project Spotlight"
             switchSpeed="10"
             images={[
-                <ProjectWindow name="some faggot bitch" 
-                images={[
-                    <ul className="tree-view"><img src={GithubLogo} alt="GithubLogo" style={{width: "100%"}}/></ul>, 
-                    <ul className="tree-view"><img src={LinkedInLogo} alt="LinkedInLogo" style={{width: "100%", padding: "20px"}}/></ul> 
-                ]}
-                switchSpeed="5"
-                description="this is the description of the game" 
-                buttons={[{link: "https://google.com", label: "google"}, {link: "https://pornhub.com", label: "pornhub"}]}/>,
-                <ProjectWindow name="some faggot bitch part 2" 
-                images={[
-                    <ul className="tree-view"><img src={GithubLogo} alt="GithubLogo" style={{width: "100%"}}/></ul>, 
-                    <ul className="tree-view"><img src={Portrait} alt="LinkedInLogo" style={{width: "100%", padding: "20px"}}/></ul> 
-                ]}
-                switchSpeed="5" 
-                description="this is the description of the game" 
-                buttons={[{link: "https://google.com", label: "google"}, {link: "https://pornhub.com", label: "pornhub"}]}/>
+                <ProjectWindow 
+                        name="The Holy Sword" 
+                        images={[
+                           <ImageBox src={THSSS1} />,
+                           <ImageBox src={THSSS2} />,
+                           <ImageBox src={THSSS3} />
+                        ]} 
+                        switchSpeed="5" 
+                        description="A fighting game in which you don’t actually do damage to the enemy player! Your goal is to stop the other player from destroying your shrine through rituals. When you pray, you completely immobilize yourself and you have to outsmart the enemy in order to get a fighting chance at keeping your shrine alive." 
+                        buttons={[{link: "https://google.com", label: "Source (Unity Project)"}, {link: "https://ldjam.com/events/ludum-dare/46/the-holy-sword-1", label: "Ludum Dare Submission"}]}
+                        itchEmbed={<iframe src="https://itch.io/embed/617071" height="100%" width="60%" frameBorder="1px" style={{padding: "0px"}}><a href="https://pastelgames.itch.io/the-holy-sword">The Holy Sword by PastelGames</a></iframe>}
+                    />
             ]}
             />
         }
