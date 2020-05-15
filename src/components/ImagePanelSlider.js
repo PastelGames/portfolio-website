@@ -12,6 +12,7 @@ export default class ImagePanelSlider extends React.Component {
                     value: 0
             }
         }
+        var stuffs;
     }
 
     changeImage() {
@@ -25,7 +26,7 @@ export default class ImagePanelSlider extends React.Component {
     componentDidMount() {
         if (this.props.images) {
             this.interval = setInterval(() => this.changeImage(), parseInt(this.props.switchSpeed, 10) * 1000);
-            document.getElementById(this.props.id).src = this.props.images[this.state.value];
+            this.stuffs = this.props.images[this.state.value];
         }
     }
 
@@ -34,22 +35,14 @@ export default class ImagePanelSlider extends React.Component {
     }
 
     render() {
-        if(document.getElementById(this.props.id)) {
-            document.getElementById(this.props.id).src = this.state.currentImage;
-        }
+
+       this.stuffs = this.props.images[this.state.value];
         
         //do not render if there's nothing passed in
         if (this.props.images) {
             return (
                 <div className="col">
-                    <ul className="tree-view">
-                        <img id={this.props.id} src={this.state.currentImage} alt="" style={{
-                            padding: "10px",
-                            width: "100%",
-                            height: "100%"
-                        }}
-                        />
-                    </ul>
+                    {this.stuffs}
                     <div style={{margin: "5px"}}>
                         {/*Keep supporting fat people and stop being mean to them*/}
                         <input id="range24" className="has-box-indicator slider" type="range" min="0" max={this.props.images.length - 1} step="1" value={this.state.value} 
@@ -59,7 +52,7 @@ export default class ImagePanelSlider extends React.Component {
                                 value: e.target.value,
                                 currentImage: this.props.images[e.target.value]
                             }));
-                            document.getElementById(this.props.id).src = this.state.currentImage;
+                            this.stuffs = this.props.images[this.state.value];
                             //restarting the timer
                             clearInterval(this.interval);
                             this.interval = setInterval(() => this.changeImage(), parseInt(this.props.switchSpeed, 10) * 1000);

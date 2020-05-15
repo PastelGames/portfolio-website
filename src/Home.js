@@ -5,10 +5,37 @@ import Portrait from './IMG_0816.PNG';
 import GithubLogo from './GitHub_Logo.png';
 import LinkedInLogo from './LI-Logo.png';
 import { ProjectWindow } from './components/ProjectWindow';
+import ImagePanelSlider from './components/ImagePanelSlider';
 
 export const Home = () => (
     <div className="container-fluid">
-        <ProjectWindow title="Project Spotlight" name="some faggot bitch" images={[GithubLogo, LinkedInLogo]} imageSwapSpeed="5" description="this is the description of the game" buttons={[{link: "https://google.com", label: "google"}, {link: "https://pornhub.com", label: "pornhub"}]}/>
+        <Window 
+        title="Project Spotlight" 
+        content={
+            <ImagePanelSlider 
+            id="Project Spotlight"
+            switchSpeed="10"
+            images={[
+                <ProjectWindow name="some faggot bitch" 
+                images={[
+                    <ul className="tree-view"><img src={GithubLogo} alt="GithubLogo" style={{width: "100%"}}/></ul>, 
+                    <ul className="tree-view"><img src={LinkedInLogo} alt="LinkedInLogo" style={{width: "100%", padding: "20px"}}/></ul> 
+                ]}
+                switchSpeed="5"
+                description="this is the description of the game" 
+                buttons={[{link: "https://google.com", label: "google"}, {link: "https://pornhub.com", label: "pornhub"}]}/>,
+                <ProjectWindow name="some faggot bitch part 2" 
+                images={[
+                    <ul className="tree-view"><img src={GithubLogo} alt="GithubLogo" style={{width: "100%"}}/></ul>, 
+                    <ul className="tree-view"><img src={Portrait} alt="LinkedInLogo" style={{width: "100%", padding: "20px"}}/></ul> 
+                ]}
+                switchSpeed="5" 
+                description="this is the description of the game" 
+                buttons={[{link: "https://google.com", label: "google"}, {link: "https://pornhub.com", label: "pornhub"}]}/>
+            ]}
+            />
+        }
+        />
         <div className="row">
             <div className="col-md-6">
                 <div className="row d-flex justify-content-center">
