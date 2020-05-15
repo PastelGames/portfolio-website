@@ -15,9 +15,7 @@ export const Games = () => (
                 content={
                     <div className="m-3" >
                         <div className="row align-items-center d-flex justify-content-center">
-                            <div className="col-lg-6">
-                                <ImagePanelSlider id="The Holy Sword" images={[TheHolySwordScreenshot, TheHolySwordBanner, GHL]} switchSpeed="5"/>
-                            </div>
+                            <ImagePanelSlider id="The Holy Sword" images={[TheHolySwordBanner, TheHolySwordScreenshot]} switchSpeed="5" className="col-lg-6"/>
                             <div className="col-lg-6">
                                 <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>A fighting game in which you don’t actually do damage to the enemy player! Your goal is to stop the other player from destroying your shrine through rituals. When you pray, you completely immobilize yourself and you have to outsmart the enemy in order to get a fighting chance at keeping your shrine alive.</p>
                                 <a href="https://github.com/PastelGames/The-Holy-Sword" target="_blank" rel="noopener noreferrer">
