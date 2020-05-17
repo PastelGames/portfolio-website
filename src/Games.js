@@ -2,9 +2,10 @@ import React from 'react';
 import "98.css";
 import Window from './components/Window';
 import {ProjectWindow} from './components/ProjectWindow';
-import THSSS1 from './images/THS/the holy sword images.png';
 import THSBanner from './images/THS/holy sword banner.png';
-import THSSS2 from './images/THS/thsss2.png';
+
+import THSSS1 from './images/THS/thsg3.gif';
+import THSSS2 from './images/THS/thsg2.gif';
 import THSSS3 from './images/THS/thsss3.png';
 
 const ImageBox = props => (

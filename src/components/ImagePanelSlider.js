@@ -8,7 +8,6 @@ export default class ImagePanelSlider extends React.Component {
         super(props);
         if (props.images) {
             this.state = {
-                    currentImage: props.images[0],
                     value: 0
             }
         }
@@ -16,18 +15,14 @@ export default class ImagePanelSlider extends React.Component {
 
     changeImage() {
         this.setState(state => ({
-            value: (state.value + 1) % this.props.images.length,
-            currentImage: this.props.images[(state.value + 1) % this.props.images.length]
+            value: (state.value + 1) % this.props.images.length
         }));
-        this.render();
     }
 
     componentDidMount() {
         if (this.props.images) {
             this.interval = setInterval(() => this.changeImage(), parseInt(this.props.switchSpeed, 10) * 1000);
-            this.stuffs = this.props.images[this.state.value];
         }
-        console.log(this.props.images);
     }
 
     componentWillUnmount() {
@@ -47,12 +42,10 @@ export default class ImagePanelSlider extends React.Component {
                         {/*Keep supporting fat people and stop being mean to them*/}
                         <input className="has-box-indicator slider" type="range" min="0" max={this.props.images.length - 1} step="1" value={this.state.value} 
                         onChange={(e) => {
-                            e.persist(); 
+                            e.persist();
                             this.setState( state => ({
-                                value: e.target.value,
-                                currentImage: this.props.images[e.target.value]
+                                value: e.target.value
                             }));
-                            this.stuffs = this.props.images[this.state.value];
                             //restarting the timer
                             clearInterval(this.interval);
                             this.interval = setInterval(() => this.changeImage(), parseInt(this.props.switchSpeed, 10) * 1000);
