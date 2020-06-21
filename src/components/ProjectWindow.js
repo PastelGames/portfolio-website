@@ -5,13 +5,17 @@ import ImagePanelSlider from './ImagePanelSlider';
 
 export const ProjectWindow = props => {
 
-    const links = props.buttons.map(button => {
-        return (
-            <a href={button.link} target="_blank" rel="noopener noreferrer">
-                <button style={{paddingLeft: "10px", paddingRight: "10px" }} className="m-2">{button.label}</button>
-            </a>
-        )
-    })
+    var links = null;
+
+    if (props.buttons) {
+        links = props.buttons.map(button => {
+                return (
+                    <a href={button.link} target="_blank" rel="noopener noreferrer">
+                        <button style={{paddingLeft: "10px", paddingRight: "10px" }} className="m-2">{button.label}</button>
+                    </a>
+                )
+        })
+    }   
 
     return (
         <div className="m-3" >

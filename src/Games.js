@@ -6,6 +6,10 @@ import THSSS1 from './images/THS/the holy sword images.png';
 import THSBanner from './images/THS/holy sword banner.png';
 import THSSS2 from './images/THS/thsss2.png';
 import THSSS3 from './images/THS/thsss3.png';
+import WHNGIF1 from './images/WHN/WHNGIF1.gif';
+import WHNGIF2 from './images/WHN/WHNGIF2.gif';
+import WHNGIF3 from './images/WHN/WHNGIF3.gif';
+import WHNSS1 from './images/WHN/WHNSS1.png';
 
 const ImageBox = props => (
     <ul className="tree-view"><img src={props.src} alt="THSSS1" style={{width: "100%", height: "100%", padding: "5px"}}/></ul>
@@ -19,7 +23,7 @@ export const Games = () => (
                 content={
                     <div>
                     <img src={THSBanner} alt="THSSS1" style={{width: "100%", height: "100%", padding: "5px"}}/>
-                    <ProjectWindow 
+                    <ProjectWindow
                         name="The Holy Sword" 
                         images={[
                            <ImageBox src={THSSS1} />,
@@ -30,6 +34,24 @@ export const Games = () => (
                         description="A fighting game in which you don’t actually do damage to the enemy player! Your goal is to stop the other player from destroying your shrine through rituals. When you pray, you completely immobilize yourself and you have to outsmart the enemy in order to get a fighting chance at keeping your shrine alive." 
                         buttons={[{link: "https://google.com", label: "Source (Unity Project)"}, {link: "https://ldjam.com/events/ludum-dare/46/the-holy-sword-1", label: "Ludum Dare Submission"}]}
                         itchEmbed={<iframe src="https://itch.io/embed/617071" height="100%" width="60%" frameBorder="1px" style={{padding: "0px"}}><a href="https://pastelgames.itch.io/the-holy-sword">The Holy Sword by PastelGames</a></iframe>}
+                    />
+                    </div>
+                }
+                />
+                <Window title="Weeds Have Needs"
+                content={
+                    <div>
+                    <ProjectWindow
+                        name="Weeds Have Needs" 
+                        images={[
+                           <ImageBox src={WHNSS1} />,
+                           <ImageBox src={WHNGIF1} />,
+                           <ImageBox src={WHNGIF2} />,
+                           <ImageBox src={WHNGIF3} />
+                        ]} 
+                        switchSpeed="5" 
+                        description="Weeds Have Needs is a game that is all about quick thinking! You have plants that need to be taken care of. Bring them their resources or they'll die!"
+                        itchEmbed={<iframe src="https://itch.io/embed/486994" height="167" width="552" frameborder="0"><a href="https://pastelgames.itch.io/weeds-have-needs">Weeds Have Needs by PastelGames</a></iframe>}
                     />
                     </div>
                 }

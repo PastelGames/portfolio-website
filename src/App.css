@@ -2,8 +2,15 @@
     cursor: url(derp.png), auto;
 }
 
+
+
 a {
     cursor: url(self\ aware.png), pointer;
+    color: pink;
+}
+
+a:hover {
+    color: purple;
 }
 
 button {
