@@ -23,7 +23,7 @@ function App() {
           backgroundColor: "#ffccff"
         }} />
         <Layout>
-          <Router>
+          <Router basename={process.env.PUBLIC_URL}>
             <NavigationBar/>
             <Switch>
               <Route exact path="/" component={Home} />
