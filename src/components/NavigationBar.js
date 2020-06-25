@@ -25,7 +25,7 @@ export const NavigationBar = () => (
         <Navbar expand="lg">
             <div className="window">
                 <div className="window-body">
-                    <Navbar.Brand href="/" className="navbar-brand">Pastel Games &lt;3</Navbar.Brand>
+                    <Navbar.Brand className="navbar-brand">Pastel Games &lt;3</Navbar.Brand>
                 </div>
             </div>
             <div className="window">

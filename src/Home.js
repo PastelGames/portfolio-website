@@ -19,6 +19,12 @@ import WHNSS1 from './images/WHN/WHNSS1.png';
 import ControllerIcon from './images/Icons/Controller Icon.png';
 import ComputerIcon from './images/Icons/Computer Icon.png';
 import PeopleIcon from './images/Icons/People Icon.png';
+import WWWIcon from './images/Icons/WWW Icon.png';
+import ARIcon from './images/Icons/AR Icon.png';
+
+import AstroParadeGif1 from './images/Astro Parade/title.jpg';
+import AstroParadeGif2 from './images/Astro Parade/gif1.gif';
+import AstroParadeGif3 from './images/Astro Parade/gif2.gif';
 
 const ImageBox = props => (
     <ul className="tree-view"><img src={props.src} alt="THSSS1" style={{width: "100%", height: "100%", padding: "5px"}}/></ul>
@@ -46,6 +52,18 @@ export const Home = () => (
                         itchEmbed={<iframe src="https://itch.io/embed/617071" height="100%" width="60%" frameBorder="1px" style={{padding: "0px"}}><a href="https://pastelgames.itch.io/the-holy-sword">The Holy Sword by PastelGames</a></iframe>}
                     />,
                 
+                    <ProjectWindow
+                        name="AstroParade" 
+                        images={[
+                           <ImageBox src={AstroParadeGif1} />,
+                           <ImageBox src={AstroParadeGif2} />,
+                           <ImageBox src={AstroParadeGif3} />
+                        ]} 
+                        switchSpeed="6" 
+                        description="AstroParade is a game made with Unreal Engine 4. It is a 3D exploration game where you have to gain the favor of monsters to bring back to your home planet by completing rhythm minigames and dancing for monsters." 
+                        buttons={[{link: "https://drive.google.com/drive/folders/1XfvH7IN5beekhULkfBxysQgqqwy2NzCz?usp=sharing", label: "Play Game (Executable)"}]}
+                    />,
+
                 <ProjectWindow
                     name="Weeds Have Needs" 
                     images={[
@@ -56,7 +74,7 @@ export const Home = () => (
                     ]} 
                     switchSpeed="5" 
                     description="Weeds Have Needs is a game that is all about quick thinking! You have plants that need to be taken care of. Bring them their resources or they'll die!"
-                    itchEmbed={<iframe src="https://itch.io/embed/486994" height="167" width="552" frameborder="0"><a href="https://pastelgames.itch.io/weeds-have-needs">Weeds Have Needs by PastelGames</a></iframe>}
+                    itchEmbed={<iframe src="https://itch.io/embed/486994" height="100%" width="60%" frameborder="1px"><a href="https://pastelgames.itch.io/weeds-have-needs">Weeds Have Needs by PastelGames</a></iframe>}
                 />   
             ]}
             />
@@ -110,6 +128,23 @@ export const Home = () => (
                     
                 }
                 />
+
+                <Window title="Check El Out on GitHub"
+
+                content={
+                    <a href="https://github.com/PastelGames" target="_blank" rel="noopener noreferrer">
+                        <button style={{
+                                height: "50%",
+                                width: "50%",
+                            }}>
+                            <img src={GithubLogo} alt="My Github" 
+                            className="img-fluid"
+                            />
+                        </button>
+                    </a>
+                    
+                }
+                />
                 
             </div>
 
@@ -120,20 +155,30 @@ export const Home = () => (
                     title="Cool Things That El Can Do" 
                     content={
                         <div className="row">
-                            <div className="col-md-4">
+                            <div className="col">
                                 <img src={ControllerIcon} alt="A cute lil icon of a controller" style={{width: "128px", height: "128px", padding: "10px"}}/>
                                 <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Game Design</p>
                                 <p style={{flex: "1", flexWrap: "wrap"}}>Check out my games! Having a really fun core game loop is integral to any memorable gaming experience.</p>
                             </div>
-                            <div className="col-md-4">
+                            <div className="col">
                                 <img src={ComputerIcon} alt="A cute lil icon of a computer" style={{width: "128px", height: "128px", padding: "10px"}}/>
                                 <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Programming</p>
                                 <p style={{flex: "1", flexWrap: "wrap"}}>I'm proficient in Java, C#, C++ and always learning more!</p>
                             </div>
-                            <div className="col-md-4">
+                            <div className="col">
                                 <img src={PeopleIcon} alt="A cute lil icon of some ppl networking" style={{width: "128px", height: "128px", padding: "10px"}}/>
                                 <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Collaboration</p>
                                 <p style={{flex: "1", flexWrap: "wrap"}}>I'm quite comfortable with Git and other forms of game development collaboration. Let's work together!</p>
+                            </div>
+                            <div className="col">
+                                <img src={WWWIcon} alt="A cute lil icon of some web" style={{width: "128px", height: "128px", padding: "10px"}}/>
+                                <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Web Development</p>
+                                <p style={{flex: "1", flexWrap: "wrap"}}>I have experience with React and Node.js. I made the website you're on right now!</p>
+                            </div>
+                            <div className="col">
+                                <img src={ARIcon} alt="A cute lil icon of AR" style={{width: "128px", height: "128px", padding: "10px"}}/>
+                                <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>AR/VR</p>
+                                <p style={{flex: "1", flexWrap: "wrap"}}>I have experience making AR experiences in Unity!</p>
                             </div>
                         </div>
                     }
@@ -149,25 +194,9 @@ export const Home = () => (
                 <Window title="Get in Contact with El"
                 content={
                     <div>
-                        <h5><a href="mailto:el@pastelpink.games" target="_blank" rel="noopener noreferrer">el@pastelpink.games</a></h5>
+                        <h5><a href="mailto:elchristopher@outlook.com" target="_blank" rel="noopener noreferrer"><button>elchristopher@outlook.com</button></a></h5>
                     </div>
                 }
-                />
-                <Window title="Check El Out on GitHub"
-
-                    content={
-                        <a href="https://github.com/PastelGames" target="_blank" rel="noopener noreferrer">
-                            <button style={{
-                                    height: "50%",
-                                    width: "50%",
-                                }}>
-                                <img src={GithubLogo} alt="My Github" 
-                                className="img-fluid"
-                                />
-                            </button>
-                        </a>
-                        
-                    }
                 />
 
             </div>
