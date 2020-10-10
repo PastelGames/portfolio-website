@@ -186,7 +186,7 @@ export const Home = () => (
 
                 <Window title ="Check Out El's Resume"
                     content={
-                        <a href="https://drive.google.com/file/d/1NRo0ud4enXseYtfVtE1MuMEDS3I7s-iW/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/file/d/1ikjWua3lN1mB6HweclItJgxC8K5KDhk3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <button>Go!</button>
                         </a>
                     }

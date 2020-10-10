@@ -23,12 +23,14 @@ function App() {
           backgroundColor: "#ffccff"
         }} />
         <Layout>
-          <Router basename={process.env.PUBLIC_URL}>
+          <Router basename={process.env.PUBLIC_URL + '/'}>
             <NavigationBar/>
             <Switch>
               <Route exact path="/" component={Home} />
               <Route path="/games" component={Games} />
-              <Route path="/programming" component={Programming} />
+              {
+                //<Route path="/programming" component={Programming} />
+              }
               <Route component={NoMatch} />
             </Switch>
           </Router>
