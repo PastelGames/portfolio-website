@@ -50,13 +50,6 @@ export const NavigationBar = () => (
                             </button>
                         </Nav.Link>
                     </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link active="false">
-                            <button>
-                                <Link to="/programming" className="nav-link">Programming</Link>
-                            </button>
-                        </Nav.Link>
-                    </Nav.Item>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

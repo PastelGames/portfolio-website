@@ -22,9 +22,15 @@ import PeopleIcon from './images/Icons/People Icon.png';
 import WWWIcon from './images/Icons/WWW Icon.png';
 import ARIcon from './images/Icons/AR Icon.png';
 
-import AstroParadeGif1 from './images/Astro Parade/title.jpg';
-import AstroParadeGif2 from './images/Astro Parade/gif1.gif';
-import AstroParadeGif3 from './images/Astro Parade/gif2.gif';
+import OTRGif1 from './images/Off the Ringer/gif1.gif';
+import OTRGif2 from './images/Off the Ringer/gif2.gif';
+import OTRGif3 from './images/Off the Ringer/gif3.gif';
+import OTRGif4 from './images/Off the Ringer/gif4.gif';
+
+import OrbeatzGif1 from './images/Orbeatz/gif1.gif';
+import OrbeatzGif2 from './images/Orbeatz/gif2.gif';
+import OrbeatzGif3 from './images/Orbeatz/gif3.gif';
+import OrbeatzGif4 from './images/Orbeatz/gif4.gif';
 
 const ImageBox = props => (
     <ul className="tree-view"><img src={props.src} alt="THSSS1" style={{width: "100%", height: "100%", padding: "5px"}}/></ul>
@@ -39,6 +45,34 @@ export const Home = () => (
             id="Project Spotlight"
             switchSpeed="20"
             images={[
+                    <ProjectWindow
+                        name="Off the Ringer" 
+                        images={[
+                           <ImageBox src={OTRGif1} />,
+                           <ImageBox src={OTRGif2} />,
+                           <ImageBox src={OTRGif3} />,
+                           <ImageBox src={OTRGif4} />
+                        ]} 
+                        switchSpeed="6" 
+                        description="The phones never stop ringing! Reconnect callers with their lost objects in this mini Swiss design-inspired puzzle game." 
+                        buttons={[{link: "https://globalgamejam.org/2021/games/untitled-phone-game-2", label: "Global Game Jam Submission"}, {link: "https://github.com/PastelGames/OffTheRinger", label: "View Source (Unity Project)"}]}
+                        itchEmbed={<iframe src="https://itch.io/embed/904088" height="100%" width="60%" frameborder="1px" style={{padding: "0px"}}><a href="https://ruthie.itch.io/off-the-ringer">Off the Ringer by Ruthie Edwards</a></iframe>}
+                    />,
+
+                    <ProjectWindow
+                    name="Orbeatz" 
+                    images={[
+                       <ImageBox src={OrbeatzGif1} />,
+                       <ImageBox src={OrbeatzGif2} />,
+                       <ImageBox src={OrbeatzGif3} />,
+                       <ImageBox src={OrbeatzGif4} />
+                    ]} 
+                    switchSpeed="6" 
+                    description="Orbeatz! A fast-paced rhythm game all about a good ear and a good time. Enjoy some tunes while tapping into some beats. If you enjoy Dance Dance Revolution and similar games, you'll enjoy the visual twist applied to this game." 
+                    buttons={[{link: "https://ldjam.com/events/ludum-dare/47/orbeatz", label: "Ludum Dare Submission"}, {link: "https://github.com/PastelGames/Orbeatz", label: "View Source (Unity Project)"}]}
+                    itchEmbed={<iframe src="https://itch.io/embed/778752" height="100%" width="60%" frameborder="1px" style={{padding: "0px"}}><a href="https://pastelgames.itch.io/orbeatz">Orbeatz by PastelGames</a></iframe>}
+                />,
+                
                 <ProjectWindow 
                         name="The Holy Sword" 
                         images={[
@@ -50,32 +84,7 @@ export const Home = () => (
                         description="A fighting game in which you don’t actually do damage to the enemy player! Your goal is to stop the other player from destroying your shrine through rituals. When you pray, you completely immobilize yourself and you have to outsmart the enemy in order to get a fighting chance at keeping your shrine alive." 
                         buttons={[{link: "https://google.com", label: "Source (Unity Project)"}, {link: "https://ldjam.com/events/ludum-dare/46/the-holy-sword-1", label: "Ludum Dare Submission"}]}
                         itchEmbed={<iframe src="https://itch.io/embed/617071" height="100%" width="60%" frameBorder="1px" style={{padding: "0px"}}><a href="https://pastelgames.itch.io/the-holy-sword">The Holy Sword by PastelGames</a></iframe>}
-                    />,
-                
-                    <ProjectWindow
-                        name="AstroParade" 
-                        images={[
-                           <ImageBox src={AstroParadeGif1} />,
-                           <ImageBox src={AstroParadeGif2} />,
-                           <ImageBox src={AstroParadeGif3} />
-                        ]} 
-                        switchSpeed="6" 
-                        description="AstroParade is a game made with Unreal Engine 4. It is a 3D exploration game where you have to gain the favor of monsters to bring back to your home planet by completing rhythm minigames and dancing for monsters." 
-                        buttons={[{link: "https://drive.google.com/drive/folders/1XfvH7IN5beekhULkfBxysQgqqwy2NzCz?usp=sharing", label: "Play Game (Executable)"}]}
-                    />,
-
-                <ProjectWindow
-                    name="Weeds Have Needs" 
-                    images={[
-                       <ImageBox src={WHNSS1} />,
-                       <ImageBox src={WHNGIF1} />,
-                       <ImageBox src={WHNGIF2} />,
-                       <ImageBox src={WHNGIF3} />
-                    ]} 
-                    switchSpeed="5" 
-                    description="Weeds Have Needs is a game that is all about quick thinking! You have plants that need to be taken care of. Bring them their resources or they'll die!"
-                    itchEmbed={<iframe src="https://itch.io/embed/486994" height="100%" width="60%" frameborder="1px"><a href="https://pastelgames.itch.io/weeds-have-needs">Weeds Have Needs by PastelGames</a></iframe>}
-                />   
+                    />
             ]}
             />
         }
@@ -103,7 +112,7 @@ export const Home = () => (
                 <Window title="About El" 
             
                 content={
-                    <h5>Hi visitor! My name is El and I’m super passionate about expressing myself through mathematics, game development/design, and programming. I am more specifically focused on computer graphics and rendering techniques. I'm also a third-year Computer Science major at Virginia Commonwealth University and president of Game Creators Coalition. Enjoy your time here and check out some of my work! Love you all!</h5>
+                    <h5>Hi visitor! My name is El and I’m super passionate about expressing myself through mathematics, game development/design, and programming. I am more specifically focused on computer graphics and rendering techniques. I'm also a fourth-year Computer Science major at Virginia Commonwealth University and president of Game Creators Coalition. Enjoy your time here and check out some of my work! Take care!</h5>
                 } />
 
                 <Window title="Connect with El on LinkedIn"
@@ -186,7 +195,7 @@ export const Home = () => (
 
                 <Window title ="Check Out El's Resume"
                     content={
-                        <a href="https://drive.google.com/file/d/1ikjWua3lN1mB6HweclItJgxC8K5KDhk3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/file/d/1YslKP1EjlaqaZkGZfXy9K_y30OpCl5XG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <button>Go!</button>
                         </a>
                     }
@@ -194,7 +203,7 @@ export const Home = () => (
                 <Window title="Get in Contact with El"
                 content={
                     <div>
-                        <h5><a href="mailto:elchristopher@outlook.com" target="_blank" rel="noopener noreferrer"><button>elchristopher@outlook.com</button></a></h5>
+                        <h5><a href="mailto:el@pastelpink.games" target="_blank" rel="noopener noreferrer"><button>el@pastelpink.games</button></a></h5>
                     </div>
                 }
                 />

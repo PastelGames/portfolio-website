@@ -37,11 +37,19 @@ import JeopardySS3 from './images/Jeopardy/ss3.png';
 import JeopardySS4 from './images/Jeopardy/ss4.png';
 import JeopardySS5 from './images/Jeopardy/ss5.png';
 
-import PPPGif1 from './images/Pastel Pink Puncher/gif1.gif';
-import PPPGif2 from './images/Pastel Pink Puncher/gif2.gif';
-import PPPGif3 from './images/Pastel Pink Puncher/gif3.gif';
-
 import WTSCMFCBanner from './images/WTSCMFC/Banner.png';
+
+import OrbeatzBanner from './images/Orbeatz/Header.png';
+import OrbeatzGif1 from './images/Orbeatz/gif1.gif';
+import OrbeatzGif2 from './images/Orbeatz/gif2.gif';
+import OrbeatzGif3 from './images/Orbeatz/gif3.gif';
+import OrbeatzGif4 from './images/Orbeatz/gif4.gif';
+
+import OTRBanner from './images/Off the Ringer/OTRHeadre.png';
+import OTRGif1 from './images/Off the Ringer/gif1.gif';
+import OTRGif2 from './images/Off the Ringer/gif2.gif';
+import OTRGif3 from './images/Off the Ringer/gif3.gif';
+import OTRGif4 from './images/Off the Ringer/gif4.gif';
 
 const ImageBox = props => (
     <ul className="tree-view"><img src={props.src} alt="THSSS1" style={{width: "100%", height: "100%", padding: "5px"}}/></ul>
@@ -51,6 +59,48 @@ export const Games = () => (
     <div className="container-fluid">
         <div className="row">
             <div className="col">
+            <Window title="Off the Ringer"
+                content={
+                    <div>
+                    <img src={OTRBanner} alt="OTRBanner" style={{width: "100%", height: "100%", padding: "5px"}}/>
+                    <ProjectWindow
+                        name="Off the Ringer" 
+                        images={[
+                           <ImageBox src={OTRGif1} />,
+                           <ImageBox src={OTRGif2} />,
+                           <ImageBox src={OTRGif3} />,
+                           <ImageBox src={OTRGif4} />
+                        ]} 
+                        switchSpeed="6" 
+                        description="The phones never stop ringing! Reconnect callers with their lost objects in this mini Swiss design-inspired puzzle game." 
+                        buttons={[{link: "https://globalgamejam.org/2021/games/untitled-phone-game-2", label: "Global Game Jam Submission"}, {link: "https://github.com/PastelGames/OffTheRinger", label: "View Source (Unity Project)"}]}
+                        itchEmbed={<iframe src="https://itch.io/embed/904088" height="100%" width="60%" frameborder="1px" style={{padding: "0px"}}><a href="https://ruthie.itch.io/off-the-ringer">Off the Ringer by Ruthie Edwards</a></iframe>}
+                    />
+                    </div>
+                }
+                />
+
+            <Window title="Orbeatz"
+                content={
+                    <div>
+                    <img src={OrbeatzBanner} alt="OrbeatzBanner" style={{width: "100%", height: "100%", padding: "5px"}}/>
+                    <ProjectWindow
+                        name="Orbeatz" 
+                        images={[
+                           <ImageBox src={OrbeatzGif1} />,
+                           <ImageBox src={OrbeatzGif2} />,
+                           <ImageBox src={OrbeatzGif3} />,
+                           <ImageBox src={OrbeatzGif4} />
+                        ]} 
+                        switchSpeed="6" 
+                        description="Orbeatz! A fast-paced rhythm game all about a good ear and a good time. Enjoy some tunes while tapping into some beats. If you enjoy Dance Dance Revolution and similar games, you'll enjoy the visual twist applied to this game." 
+                        buttons={[{link: "https://ldjam.com/events/ludum-dare/47/orbeatz", label: "Ludum Dare Submission"}, {link: "https://github.com/PastelGames/Orbeatz", label: "View Source (Unity Project)"}]}
+                        itchEmbed={<iframe src="https://itch.io/embed/778752" height="100%" width="60%" frameborder="1px" style={{padding: "0px"}}><a href="https://pastelgames.itch.io/orbeatz">Orbeatz by PastelGames</a></iframe>}
+                    />
+                    </div>
+                }
+                />
+
                 <Window title="The Holy Sword"
                 content={
                     <div>
@@ -201,26 +251,8 @@ export const Games = () => (
                            <ImageBox src={JeopardySS5} />,
                         ]} 
                         switchSpeed="3" 
-                        description="This was a tool that I created to help out a streamer who was playing Jeopardy game using streaming tools. I saw him suffering and offered to help him out by creating this software which proved to be quite useful!" 
+                        description="This was a tool that I created to help out a Twitch streamer who was playing Jeopardy game using OBS. I saw him suffering and offered to help him out by creating this software which proved to be quite useful!" 
                         buttons={[{link: "https://github.com/PastelGames/Jeopardy-Game", label: "View Source Code (Unity Project)"}, {link: "https://drive.google.com/file/d/1L4zPrUeRgDegYqPD1dzyDPTpmM3_Byrj/view?usp=sharing", label: "Play Game (Executable)"}]}
-                    />
-                    </div>
-                }
-                />
-
-                <Window title="Pastel Pink Puncher (Buggy, Incomplete)"
-                content={
-                    <div>
-                    <ProjectWindow
-                        name="Pastel Pink Puncher" 
-                        images={[
-                           <ImageBox src={PPPGif1} />,
-                           <ImageBox src={PPPGif2} />,
-                           <ImageBox src={PPPGif3} />,
-                        ]} 
-                        switchSpeed="5" 
-                        description="A fighting game in which you sacrifice your health in order to give yourself buffs. This is one of my first ever solo jam games. This game was an attempt at creating a fighting games which i later improved in iterations such as The Holy Sword." 
-                        itchEmbed={<iframe src="https://itch.io/embed/413977" height="100%" width="60%" frameborder="1px"><a href="https://pastelgames.itch.io/pastel-pink-puncher">Pastel Pink Puncher by PastelGames</a></iframe>}
                     />
                     </div>
                 }
