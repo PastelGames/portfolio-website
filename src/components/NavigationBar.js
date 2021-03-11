@@ -30,7 +30,7 @@ export const NavigationBar = () => (
             </div>
             <div className="window">
                 <div className="window-body" style={{alignItems: "center"}}>
-                    <p>Colorfully Creative Software by El Tucker</p>
+                    <p style={{fontSize: "15px"}, {fontStyle: 'italic', fontWeight: 'bolder'}}>Programmer with an interest in video games &amp; 3D mathematics</p>
                 </div>
             </div>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
