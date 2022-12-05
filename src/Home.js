@@ -112,7 +112,7 @@ export const Home = () => (
                 <Window title="About El" 
             
                 content={
-                    <h5>Hi visitor! My name is El and I’m super passionate about expressing myself through mathematics, game development/design, and programming. I am more specifically focused on computer graphics and rendering techniques. I'm also a fourth-year Computer Science major at Virginia Commonwealth University and president of Game Creators Coalition. Enjoy your time here and check out some of my work! Take care!</h5>
+                    <h5>Hi visitor! My name is El and I’m super passionate about expressing myself through mathematics, game development/design, and programming. I particularly excel in gameplay programming techniques. I am also a recent graduate of VCU with a Bachelor's Degree in Interdisciplinary Studies: Game Development &amp; Design and founder of Game Creators Coalition. Enjoy your time here and check out some of my work! Take care!</h5>
                 } />
 
                 <Window title="Connect with El on LinkedIn"
@@ -192,10 +192,9 @@ export const Home = () => (
                         </div>
                     }
                 />
-
                 <Window title ="Check Out El's Resume"
                     content={
-                        <a href="https://drive.google.com/file/d/1YslKP1EjlaqaZkGZfXy9K_y30OpCl5XG/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <a href="https://drive.google.com/file/d/1laa3EXBzk4oNa9k6YH5KeUHNXG4MyHTN/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <button>Go!</button>
                         </a>
                     }
