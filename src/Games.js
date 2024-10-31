@@ -51,6 +51,8 @@ import OTRGif2 from './images/Off the Ringer/gif2.gif';
 import OTRGif3 from './images/Off the Ringer/gif3.gif';
 import OTRGif4 from './images/Off the Ringer/gif4.gif';
 
+import PIGCBanner from './images/Panic/PIGCBanner.png';
+
 const ImageBox = props => (
     <ul className="tree-view"><img src={props.src} alt="THSSS1" style={{width: "100%", height: "100%", padding: "5px"}}/></ul>
 )
@@ -59,6 +61,23 @@ export const Games = () => (
     <div className="container-fluid">
         <div className="row">
             <div className="col">
+            <Window title="The Arkham Asylum Files: Panic in Gotham City"
+                content={
+                    <div>
+                    <img src={PIGCBanner} alt="PIGCBanner" style={{width: "100%", height: "100%", padding: "5px"}}/>
+                    <ProjectWindow
+                        name="The Arkham Asylum Files: Panic in Gotham City" 
+                        images={[
+                            <ul className="tree-view"><iframe width="100%" height="250" src="https://www.youtube.com/embed/sXmb7qYY-lk" title="The Arkham Asylum Files - AVAILABLE NOW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></ul>
+                        ]} 
+                        switchSpeed="6" 
+                        description="Immerse yourselves in the world of Batman and Harley Quinn, as Gotham City comes to life with the amazing magic of mobile augmented reality." 
+                        buttons={[{link: "https://infiniterabbitholes.com", label: "Buy Now!"}]}
+                    />
+                    </div>
+                }
+                />
+
             <Window title="Off the Ringer"
                 content={
                     <div>

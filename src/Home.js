@@ -7,19 +7,9 @@ import LinkedInLogo from './LI-Logo.png';
 import { ProjectWindow } from './components/ProjectWindow';
 import ImagePanelSlider from './components/ImagePanelSlider';
 
-import THSSS1 from './images/THS/the holy sword images.png';
-import THSSS2 from './images/THS/thsss2.png';
-import THSSS3 from './images/THS/thsss3.png';
-
-import WHNGIF1 from './images/WHN/WHNGIF1.gif';
-import WHNGIF2 from './images/WHN/WHNGIF2.gif';
-import WHNGIF3 from './images/WHN/WHNGIF3.gif';
-import WHNSS1 from './images/WHN/WHNSS1.png';
-
 import ControllerIcon from './images/Icons/Controller Icon.png';
 import ComputerIcon from './images/Icons/Computer Icon.png';
 import PeopleIcon from './images/Icons/People Icon.png';
-import WWWIcon from './images/Icons/WWW Icon.png';
 import ARIcon from './images/Icons/AR Icon.png';
 
 import OTRGif1 from './images/Off the Ringer/gif1.gif';
@@ -43,8 +33,18 @@ export const Home = () => (
         content={
             <ImagePanelSlider 
             id="Project Spotlight"
-            switchSpeed="20"
+            switchSpeed="100000"
             images={[
+                <ProjectWindow
+                        name="The Arkham Asylum Files: Panic in Gotham City" 
+                        images={[
+                            <ul className="tree-view"><iframe width="100%" height="250" src="https://www.youtube.com/embed/sXmb7qYY-lk" title="The Arkham Asylum Files - AVAILABLE NOW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></ul>
+                        ]} 
+                        switchSpeed="6" 
+                        description="Immerse yourselves in the world of Batman and Harley Quinn, as Gotham City comes to life with the amazing magic of mobile augmented reality." 
+                        buttons={[{link: "https://infiniterabbitholes.com", label: "Buy Now!"}]}
+                    />,
+
                     <ProjectWindow
                         name="Off the Ringer" 
                         images={[
@@ -72,19 +72,6 @@ export const Home = () => (
                     buttons={[{link: "https://ldjam.com/events/ludum-dare/47/orbeatz", label: "Ludum Dare Submission"}, {link: "https://github.com/PastelGames/Orbeatz", label: "View Source (Unity Project)"}]}
                     itchEmbed={<iframe src="https://itch.io/embed/778752" height="100%" width="60%" frameborder="1px" style={{padding: "0px"}}><a href="https://pastelgames.itch.io/orbeatz">Orbeatz by PastelGames</a></iframe>}
                 />,
-                
-                <ProjectWindow 
-                        name="The Holy Sword" 
-                        images={[
-                           <ImageBox src={THSSS1} />,
-                           <ImageBox src={THSSS2} />,
-                           <ImageBox src={THSSS3} />
-                        ]} 
-                        switchSpeed="5" 
-                        description="A fighting game in which you don’t actually do damage to the enemy player! Your goal is to stop the other player from destroying your shrine through rituals. When you pray, you completely immobilize yourself and you have to outsmart the enemy in order to get a fighting chance at keeping your shrine alive." 
-                        buttons={[{link: "https://google.com", label: "Source (Unity Project)"}, {link: "https://ldjam.com/events/ludum-dare/46/the-holy-sword-1", label: "Ludum Dare Submission"}]}
-                        itchEmbed={<iframe src="https://itch.io/embed/617071" height="100%" width="60%" frameBorder="1px" style={{padding: "0px"}}><a href="https://pastelgames.itch.io/the-holy-sword">The Holy Sword by PastelGames</a></iframe>}
-                    />
             ]}
             />
         }
@@ -163,38 +150,37 @@ export const Home = () => (
                 <Window 
                     title="Cool Things That El Can Do" 
                     content={
-                        <div className="row">
-                            <div className="col">
-                                <img src={ControllerIcon} alt="A cute lil icon of a controller" style={{width: "128px", height: "128px", padding: "10px"}}/>
-                                <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Game Design</p>
-                                <p style={{flex: "1", flexWrap: "wrap"}}>Check out my games! Having a really fun core game loop is integral to any memorable gaming experience.</p>
+                        <div>
+                            <div className="row">
+                                <div className="col">
+                                    <img src={ControllerIcon} alt="A cute lil icon of a controller" style={{width: "128px", height: "128px", padding: "10px"}}/>
+                                    <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Game Design</p>
+                                    <p style={{flex: "1", flexWrap: "wrap"}}>Check out my games! Having a really fun core game loop is integral to any memorable gaming experience.</p>
+                                </div>
+                                <div className="col">
+                                    <img src={ComputerIcon} alt="A cute lil icon of a computer" style={{width: "128px", height: "128px", padding: "10px"}}/>
+                                    <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Programming</p>
+                                    <p style={{flex: "1", flexWrap: "wrap"}}>I'm proficient in Java, C#, C++ and always learning more!</p>
+                                </div>
                             </div>
-                            <div className="col">
-                                <img src={ComputerIcon} alt="A cute lil icon of a computer" style={{width: "128px", height: "128px", padding: "10px"}}/>
-                                <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Programming</p>
-                                <p style={{flex: "1", flexWrap: "wrap"}}>I'm proficient in Java, C#, C++ and always learning more!</p>
-                            </div>
-                            <div className="col">
-                                <img src={PeopleIcon} alt="A cute lil icon of some ppl networking" style={{width: "128px", height: "128px", padding: "10px"}}/>
-                                <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Collaboration</p>
-                                <p style={{flex: "1", flexWrap: "wrap"}}>I'm quite comfortable with Git and other forms of game development collaboration. Let's work together!</p>
-                            </div>
-                            <div className="col">
-                                <img src={WWWIcon} alt="A cute lil icon of some web" style={{width: "128px", height: "128px", padding: "10px"}}/>
-                                <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Web Development</p>
-                                <p style={{flex: "1", flexWrap: "wrap"}}>I have experience with React and Node.js. I made the website you're on right now!</p>
-                            </div>
-                            <div className="col">
-                                <img src={ARIcon} alt="A cute lil icon of AR" style={{width: "128px", height: "128px", padding: "10px"}}/>
-                                <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>AR/VR</p>
-                                <p style={{flex: "1", flexWrap: "wrap"}}>I have experience making AR experiences in Unity!</p>
+                            <div className="row">
+                                <div className="col">
+                                    <img src={PeopleIcon} alt="A cute lil icon of some ppl networking" style={{width: "128px", height: "128px", padding: "10px"}}/>
+                                    <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>Collaboration</p>
+                                    <p style={{flex: "1", flexWrap: "wrap"}}>I'm quite comfortable with Git and other forms of game development collaboration. Let's work together!</p>
+                                </div>
+                                <div className="col">
+                                    <img src={ARIcon} alt="A cute lil icon of AR" style={{width: "128px", height: "128px", padding: "10px"}}/>
+                                    <p style={{flex: "1", flexWrap: "wrap", fontSize: "20px"}}>AR/VR</p>
+                                    <p style={{flex: "1", flexWrap: "wrap"}}>I have experience making AR experiences in Unity!</p>
+                                </div>
                             </div>
                         </div>
                     }
                 />
                 <Window title ="Check Out El's Resume"
                     content={
-                        <a href="https://drive.google.com/file/d/1laa3EXBzk4oNa9k6YH5KeUHNXG4MyHTN/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <a href="https://docs.google.com/document/d/1N378CCdRIwV_7zKB5mw6wCRS7BDVcBXK8bdWzq3o8xA/edit?usp=sharing" target="_blank" rel="noopener noreferrer">
                             <button>Go!</button>
                         </a>
                     }
